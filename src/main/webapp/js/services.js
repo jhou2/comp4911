@@ -62,8 +62,8 @@ cascadiaServices.factory('permissions',
     };
   });
 
-cascadiaServices.factory('GrowlResponse', [
-  function() {
+cascadiaServices.factory('GrowlResponse', ['$location',
+  function($location) {
     return function(response) {
       if(response.status >= 200 && response.status <=304) {
         $.growl.notice({message:"Operation Successful"});
@@ -81,7 +81,8 @@ cascadiaServices.factory('GrowlResponse', [
 
       }
       else if(response.status == 401){
-          $.growl.error({message: "Unauthorized. Check your username and password."})
+          $location.path("/login");
+          $.growl.error({message: "Unauthorized. Please log in again."})
       }
       else if(response.status == 403){
         $.growl.error({message: "Forbidden"})
