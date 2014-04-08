@@ -52,23 +52,22 @@ public class SampleData {
 
     @PostConstruct
     public void populateData() {
-        generateUsers();
-        generateUsers(100);  // generates n regular users, n/5 HR, n/4 managers
-        generatePayRates();
-        generateEffort();
-        generateProjects();
-        generate100Projects();
-        generateProjectAssignments();
-
-        generateWorkPackages();
-        generateWorkPackageAssignments();
-        generateWorkPackageAssignmentForAll();
+//        generateUsers();
+//        generateUsers(100);  // generates n regular users, n/5 HR, n/4 managers
+//        generatePayRates();
+//        generateEffort();
+//        generateProjects();
+//        generate100Projects();
+//        generateProjectAssignments();
+//        generateWorkPackages();
+//        generateWorkPackageAssignments();
+//        generateWorkPackageAssignmentForAll();
 
         generateTimesheets();
-        //andJobsSaidLetThereBeAShitTonOfTimeSheets();
+//        andJobsSaidLetThereBeAShitTonOfTimeSheets();
 
-        generateWorkPackageStatusReports();
-        projectWPSRGenerator(55522);
+//        generateWorkPackageStatusReports();
+//        projectWPSRGenerator(55522);
     }
 
     private void generateUsers() {
